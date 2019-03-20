@@ -7,6 +7,7 @@ This project requires **Python 3.x** and the following Python libraries installe
 - [Pandas](http://pandas.pydata.org)
 - [matplotlib](http://matplotlib.org/)
 - [keras](https://keras.io/)
+- [Eli5](https://eli5.readthedocs.io/en/latest/)
 - [scikit-learn](http://scikit-learn.org/stable/)
 - [spotipy](https://spotipy.readthedocs.io/)
 
