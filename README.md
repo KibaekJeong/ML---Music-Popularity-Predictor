@@ -160,8 +160,6 @@ Comparing all the models, Neural Network performed much better than all the othe
 
 At first, song popularity predictor by Mohamed Nasreldin, Stephen Ma, Eric Dailey, and Phuc Dang was chosen as benchmark model. However, song popularity predictor used area under curve (AUC) as their metrics, which is not a great choice for regression problem. AUC is a good metric for a classification models. I was planning to run their code with root mean squared and R squared metric. However, code provided by Mohamed Nasreldin does not include complete dataset named cleaned_million.csv. Therefore, it was not possible for me to run the code and obtain values for comparison.
 
-Model by Mohamed Nasreldin, Stephen Ma, Eric Dailey, Phuc Dang can be found from
-https://towardsdatascience.com/song-popularity-predictor-1ef69735e380
+Model by Mohamed Nasreldin, Stephen Ma, Eric Dailey, Phuc Dang can be found from [here](https://towardsdatascience.com/song-popularity-predictor-1ef69735e380)
 
-with source code
-https://github.com/manasreldin/Song-Popularity-Predictor
+with [source code](https://github.com/manasreldin/Song-Popularity-Predictor)
