@@ -1,5 +1,24 @@
-# ML---Music-Popularity-Predictor
-## Install
+# Machine Learning - Music-Popularity-Predictor
+
+## Table of Contents
+- [Overview](#Overview)
+- [Dependencies](#Dependencies)
+- [Code](#Code)
+- [Running the code](#Running-the-code)
+- [Data](#Data)
+- [Evaluation](#Evaluation)
+- [Benchmark](#Benchmark)
+
+## Overview
+Following repository is dedicated for capstone project of [Machine Learning Engineer Nanodegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t) program.
+
+Main objective of capstone project is to utilize any machine learning algorithm in real-world problem. I have chosen to build an algorithm that predicts popularity of a music in [Spotify](https://www.spotify.com/). All the data are collected from [Spotify](https://www.spotify.com/) using [Spotipy](https://spotipy.readthedocs.io/en/2.6.1/).
+
+In order to choose best model for prediction, several supervised learning algorithms were tested. Linear regression, logistic regression, decision tree regressor, random forest regressor, and neural network has been tested out for final model. At the end, neural network was chosen for final model, as it was able to predict with lowest root mean square error and mean absolute error.
+
+For more detail of following project, you may check out the report
+
+## Dependencies
 
 This project requires **Python 3.x** and the following Python libraries installed:
 
@@ -13,7 +32,7 @@ This project requires **Python 3.x** and the following Python libraries installe
 
 You will also need to have software installed to run and execute an [iPython Notebook](http://ipython.org/notebook.html)
 
-We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
+We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project.
 
 ## Code
 
@@ -32,12 +51,12 @@ Following project includes several codes for different purpose.
 5. spotifydatafile.csv : output from Data Collection
 
 
-## Run
+## Running the code
 
 In a terminal or command window, navigate to the top-level project directory `ML---Music-Popularity-Predictor/` (that contains following README file) and run one of the following commands:
 
 
-1. If you want to simply get a estimated song popularity: 
+1. If you want to simply get a estimated song popularity:
 ```bash
 ipython notebook Predict_Song_popularity(Final).ipynb
 ```  
@@ -61,7 +80,7 @@ jupyter notebook Song_Popularity_Estimator_using_Spotify_Song_Analysis.ipynb
 This will open the iPython Notebook software and project file in your browser.
 ```
 
-## Data 
+## Data
 
 All the data for following project is collected from spotify. If further information is needed, please visit https://developer.spotify.com/
 
@@ -114,16 +133,35 @@ All the data for following project is collected from spotify. If further informa
 - `timbre_ 1.. 12_iqr`: interquartile range of a timbre through out the song
 - `timbre_ 1.. 12_kurtosis`: kurtosis of a timbre through out the song
 
+## Evaluation
+Among various accuracy measurement, root mean square error (RMSE) score has been used for comparing models. Below are the RMSE score for all models on pre-processed dataset.
 
-## Similar Model
+- Support Vector Classifier (SVC)
+  - RMSE Score: 371.45
 
-Similar model by Mohamed Nasreldin, Stephen Ma, Eric Dailey, Phuc Dang can be found from
+- Linear Regression
+  - RMSE Score: 260.48
+
+- Logistic Regression
+  - RMSE Score: 422
+
+- Decision Tree Regressor
+  - RMSE Score: 646.37
+
+- Random Forest Regressor
+  - RMSE: 309.1
+
+- Neural Network
+  - RMSE Score: 16.16
+
+Comparing all the models, Neural Network performed much better than all the other models. Therefore, Neural Network has been chosen as final model.
+
+## Benchmark
+
+At first, song popularity predictor by Mohamed Nasreldin, Stephen Ma, Eric Dailey, and Phuc Dang was chosen as benchmark model. However, song popularity predictor used area under curve (AUC) as their metrics, which is not a great choice for regression problem. AUC is a good metric for a classification models. I was planning to run their code with root mean squared and R squared metric. However, code provided by Mohamed Nasreldin does not include complete dataset named cleaned_million.csv. Therefore, it was not possible for me to run the code and obtain values for comparison.
+
+Model by Mohamed Nasreldin, Stephen Ma, Eric Dailey, Phuc Dang can be found from
 https://towardsdatascience.com/song-popularity-predictor-1ef69735e380
 
 with source code
 https://github.com/manasreldin/Song-Popularity-Predictor
-
-However, dataset such as cleaned_million.csv does not exist in the code.
-
-Comparison between following model and model by Mohamed Nareldin was planned to be performed. 
-However, due to lacking dataset and complete code, it was not able to be done.
