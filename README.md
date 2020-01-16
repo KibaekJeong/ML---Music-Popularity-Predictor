@@ -16,7 +16,7 @@ Main objective of capstone project is to utilize any machine learning algorithm 
 
 In order to choose best model for prediction, several supervised learning algorithms were tested. Linear regression, logistic regression, decision tree regressor, random forest regressor, and neural network has been tested out for final model. At the end, neural network was chosen for final model, as it was able to predict with lowest root mean square error and mean absolute error.
 
-For more detail of following project, you may check out the report(https://github.com/KibaekJeong/ML---Music-Popularity-Predictor/blob/master/Capstone%20Report.pdf)
+For more detail of following project, you may check out the [report](https://github.com/KibaekJeong/ML---Music-Popularity-Predictor/blob/master/Capstone%20Report.pdf)
 
 ## Dependencies
 
